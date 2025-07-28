@@ -19,11 +19,15 @@ export default defineNuxtConfig({
   // App configuration
   app: {
     head: {
-      title: 'UniPartiesKL - Your Ultimate Party Destination',
+      title: 'UniPartiesKL - Unleash The Night | KL\'s Premier Party Platform',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Discover the best parties and events in Kuala Lumpur with UniPartiesKL' }
+        { name: 'description', content: 'Experience the ultimate party destination in Kuala Lumpur. Exclusive events, premium venues, and unforgettable nights await.' },
+        { name: 'keywords', content: 'KL parties, Kuala Lumpur nightlife, exclusive events, premium venues, party platform' },
+        { property: 'og:title', content: 'UniPartiesKL - Unleash The Night' },
+        { property: 'og:description', content: 'KL\'s most exclusive party platform' },
+        { property: 'og:type', content: 'website' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
