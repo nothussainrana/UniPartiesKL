@@ -75,7 +75,7 @@
               Join Elite
             </UButton>
           </div>
-          <UButton variant="ghost" class="md:hidden text-white">
+          <UButton variant="ghost" class="md:hidden text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10">
             <UIcon name="i-heroicons-bars-3" />
           </UButton>
         </nav>
@@ -108,15 +108,14 @@
               <UIcon name="i-heroicons-calendar" class="mr-4 group-hover:animate-bounce text-3xl" />
               DISCOVER EVENTS
             </UButton>
-            <UButton 
-              size="xl" 
-              variant="outline" 
-              class="border-3 border-[#fe2905] text-[#fe2905] hover:bg-[#fe2905]/10 font-black px-16 py-8 text-2xl transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/30 group backdrop-blur-xl relative overflow-hidden"
-            >
-              <div class="absolute inset-0 bg-gradient-to-r from-[#fe2905]/0 via-[#fe2905]/10 to-[#fe2905]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-              <UIcon name="i-heroicons-map-pin" class="mr-4 group-hover:animate-bounce text-3xl" />
-              ELITE VENUES
-            </UButton>
+                         <UButton 
+               size="xl" 
+               class="border-3 border-[#fe2905] bg-transparent text-[#fe2905] hover:bg-[#fe2905]/10 font-black px-16 py-8 text-2xl transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/30 group backdrop-blur-xl relative overflow-hidden"
+             >
+               <div class="absolute inset-0 bg-gradient-to-r from-[#fe2905]/0 via-[#fe2905]/10 to-[#fe2905]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+               <UIcon name="i-heroicons-map-pin" class="mr-4 group-hover:animate-bounce text-3xl" />
+               ELITE VENUES
+             </UButton>
           </div>
         </div>
       </UContainer>
@@ -291,6 +290,24 @@
 </script>
 
 <style scoped>
+/* Custom color definitions for consistent rendering */
+:root {
+  --brand-red: #fe2905;
+}
+
+/* Force exact red color on all devices */
+.text-\[#fe2905\] {
+  color: #fe2905 !important;
+}
+
+.bg-\[#fe2905\] {
+  background-color: #fe2905 !important;
+}
+
+.border-\[#fe2905\] {
+  border-color: #fe2905 !important;
+}
+
 /* Radial gradient utility */
 .bg-gradient-radial {
   background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to));
