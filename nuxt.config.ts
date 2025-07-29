@@ -14,6 +14,12 @@ export default defineNuxtConfig({
     preset: 'cloudflare-pages'
   },
   
+  runtimeConfig: {
+    public: {
+      stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY
+    }
+  },
+  
   // Performance optimizations
   experimental: {
     payloadExtraction: false

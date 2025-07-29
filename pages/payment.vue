@@ -242,16 +242,34 @@ const navigateBack = () => {
   navigateTo('/')
 }
 
-// Purchase handler
-const handlePurchase = () => {
-  // This would integrate with a payment processor like Stripe, Razorpay, etc.
-  alert('Redirecting to payment gateway for 99RM payment...')
-  
-  // In a real implementation, you would:
-  // 1. Integrate with a payment processor like Stripe/Razorpay
-  // 2. Handle payment success/failure
-  // 3. Send Telegram group invite upon successful payment
-  // 4. Store user data and payment records
+import { loadStripe } from '@stripe/stripe-js'
+const config = useRuntimeConfig()
+const stripePromise = loadStripe(config.public.stripePublishableKey)
+
+const handlePurchase = async () => {
+  try {
+    // Call our serverless function to create a Stripe Checkout Session
+    const res = await fetch('/checkout', {
+      method: 'POST'
+    })
+
+    if (!res.ok) {
+      throw new Error('Failed to initiate payment')
+    }
+
+    const { sessionId } = await res.json()
+
+    // Redirect to Stripe Checkout
+    const stripe = await stripePromise
+    const { error } = await stripe.redirectToCheckout({ sessionId })
+    if (error) {
+      console.error(error)
+      alert('Unable to redirect to payment gateway. Please try again.')
+    }
+  } catch (err) {
+    console.error(err)
+    alert('Something went wrong. Please try again later.')
+  }
 }
 </script>
 
