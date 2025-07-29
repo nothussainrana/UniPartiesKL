@@ -97,7 +97,7 @@
               <!-- VIP Package Header -->
               <div class="text-center mb-12">
                 <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#fe2905] to-[#fe2905]/80 mb-6 shadow-2xl shadow-[#fe2905]/40">
-                  <UIcon name="i-heroicons-crown" class="w-10 h-10 text-white" />
+                  <UIcon name="i-heroicons-trophy" class="w-10 h-10 text-white" />
                 </div>
                 <h2 class="text-4xl md:text-5xl font-black text-white mb-4">
                   VIP TELEGRAM ACCESS
@@ -249,7 +249,7 @@ const stripePromise = loadStripe(config.public.stripePublishableKey)
 const handlePurchase = async () => {
   try {
     // Call our serverless function to create a Stripe Checkout Session
-    const res = await fetch('/checkout', {
+    const res = await fetch('/api/checkout', {
       method: 'POST'
     })
 
