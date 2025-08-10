@@ -1,4 +1,6 @@
 import Stripe from 'stripe'
+import { defineEventHandler, getRequestURL, setResponseStatus } from 'h3'
+import { useRuntimeConfig } from '#imports'
 
 export default defineEventHandler(async (event) => {
   try {
@@ -9,7 +11,7 @@ export default defineEventHandler(async (event) => {
       throw new Error('Stripe secret key is not configured')
     }
 
-    const stripe = new Stripe(secretKey, {
+    const stripe = new Stripe(secretKey as string, {
       apiVersion: '2023-08-16',
       httpClient: Stripe.createFetchHttpClient(),
     })
@@ -25,7 +27,7 @@ export default defineEventHandler(async (event) => {
             currency: 'MYR',
             unit_amount: 9900,
             product_data: {
-              name: 'UniPartiesKL VIP Membership',
+            name: 'Telegram Group Access (Free Event Ticket)',
             },
           },
           quantity: 1,

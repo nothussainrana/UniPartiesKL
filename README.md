@@ -1,5 +1,9 @@
 # UniPartiesKL
 
+Single product: Telegram Group Access (Comes with Free Event Ticket).
+
+Visual stack includes page transitions, animated gradients, parallax, tilt/magnetic interactions, and scroll-triggered reveals using Tailwind, GSAP, and small directives.
+
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.1
 
 ## Setup

@@ -7,7 +7,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   
   // Modules
-  modules: ['@nuxt/ui'],
+  modules: [
+    '@nuxt/ui',
+    ['@nuxtjs/tailwindcss', { exposeConfig: true }]
+  ],
+
+  // Global CSS
+  css: ['~/assets/css/main.css'],
   
   // Cloudflare Pages configuration
   nitro: {
@@ -15,8 +21,10 @@ export default defineNuxtConfig({
   },
   
   runtimeConfig: {
+    stripeSecretKey: process.env.STRIPE_SECRET_KEY,
     public: {
-      stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY
+      stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+      baseUrl: process.env.NUXT_PUBLIC_SITE_URL || process.env.DOMAIN
     }
   },
   
@@ -27,6 +35,8 @@ export default defineNuxtConfig({
   
   // App configuration
   app: {
+    pageTransition: { name: 'page-reveal', mode: 'out-in' },
+    layoutTransition: { name: 'layout-reveal', mode: 'out-in' },
     head: {
       title: 'UniPartiesKL - Unleash The Night | KL\'s Premier Party Platform',
       meta: [

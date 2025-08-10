@@ -5,7 +5,7 @@
         <UIcon name="i-heroicons-check-circle" class="w-24 h-24 text-green-400 mx-auto animate-pulse" />
         <h1 class="text-4xl md:text-6xl font-black mt-6">Payment Successful!</h1>
         <p class="text-lg md:text-xl mt-4 text-white/80">
-          Welcome to UniPartiesKL Elite. You’ll receive full access within a few minutes.
+          You now have Telegram Group Access (with a Free Event Ticket). Your invite link is below.
         </p>
       </div>
 

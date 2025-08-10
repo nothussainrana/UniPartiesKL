@@ -1,52 +1,52 @@
 <template>
   <div class="min-h-screen bg-black text-white overflow-hidden relative">
-    <!-- Dynamic Moving Background -->
-    <div class="fixed inset-0 z-0">
+    <!-- Dynamic Moving Background (parallax-enabled) -->
+    <div class="absolute inset-0 z-0" data-scroll>
       <!-- Pure black base -->
       <div class="absolute inset-0 bg-black"></div>
       
       <!-- Moving gradient orbs -->
       <div class="absolute inset-0">
-        <div class="absolute w-96 h-96 bg-gradient-radial from-[#fe2905]/20 to-transparent rounded-full blur-3xl animate-float-slow" 
+        <div data-scroll data-scroll-speed="-2" class="absolute w-96 h-96 bg-gradient-radial from-[#fe2905]/20 to-transparent rounded-full blur-3xl animate-float-slow" 
              style="top: 10%; left: 10%; animation-delay: 0s;"></div>
-        <div class="absolute w-80 h-80 bg-gradient-radial from-[#fe2905]/15 to-transparent rounded-full blur-3xl animate-float-medium" 
+        <div data-scroll data-scroll-speed="1.4" class="absolute w-80 h-80 bg-gradient-radial from-[#fe2905]/15 to-transparent rounded-full blur-3xl animate-float-medium" 
              style="top: 60%; right: 15%; animation-delay: 2s;"></div>
-        <div class="absolute w-72 h-72 bg-gradient-radial from-[#fe2905]/10 to-transparent rounded-full blur-3xl animate-float-fast" 
+        <div data-scroll data-scroll-speed="-1" class="absolute w-72 h-72 bg-gradient-radial from-[#fe2905]/10 to-transparent rounded-full blur-3xl animate-float-fast" 
              style="bottom: 20%; left: 30%; animation-delay: 4s;"></div>
       </div>
       
       <!-- Moving particles system -->
       <div class="absolute inset-0 overflow-hidden">
         <!-- Large moving particles -->
-        <div class="absolute w-3 h-3 bg-[#fe2905] rounded-full animate-drift-1 opacity-80"></div>
-        <div class="absolute w-2 h-2 bg-[#fe2905] rounded-full animate-drift-2 opacity-60"></div>
-        <div class="absolute w-4 h-4 bg-[#fe2905] rounded-full animate-drift-3 opacity-40"></div>
-        <div class="absolute w-1.5 h-1.5 bg-[#fe2905] rounded-full animate-drift-4 opacity-90"></div>
-        <div class="absolute w-2.5 h-2.5 bg-[#fe2905] rounded-full animate-drift-5 opacity-70"></div>
+        <div data-scroll data-scroll-speed="0.6" class="absolute w-3 h-3 bg-[#fe2905] rounded-full animate-drift-1 opacity-80"></div>
+        <div data-scroll data-scroll-speed="-0.5" class="absolute w-2 h-2 bg-[#fe2905] rounded-full animate-drift-2 opacity-60"></div>
+        <div data-scroll data-scroll-speed="0.8" class="absolute w-4 h-4 bg-[#fe2905] rounded-full animate-drift-3 opacity-40"></div>
+        <div data-scroll data-scroll-speed="-0.4" class="absolute w-1.5 h-1.5 bg-[#fe2905] rounded-full animate-drift-4 opacity-90"></div>
+        <div data-scroll data-scroll-speed="0.9" class="absolute w-2.5 h-2.5 bg-[#fe2905] rounded-full animate-drift-5 opacity-70"></div>
         
         <!-- Medium particles -->
-        <div class="absolute w-1 h-1 bg-[#fe2905] rounded-full animate-spiral-1 opacity-80"></div>
-        <div class="absolute w-1.5 h-1.5 bg-[#fe2905] rounded-full animate-spiral-2 opacity-60"></div>
-        <div class="absolute w-1 h-1 bg-[#fe2905] rounded-full animate-spiral-3 opacity-90"></div>
+        <div data-scroll data-scroll-speed="-0.3" class="absolute w-1 h-1 bg-[#fe2905] rounded-full animate-spiral-1 opacity-80"></div>
+        <div data-scroll data-scroll-speed="0.4" class="absolute w-1.5 h-1.5 bg-[#fe2905] rounded-full animate-spiral-2 opacity-60"></div>
+        <div data-scroll data-scroll-speed="-0.2" class="absolute w-1 h-1 bg-[#fe2905] rounded-full animate-spiral-3 opacity-90"></div>
         
         <!-- Small floating particles -->
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-1"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-2"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-3"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-4"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-5"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-6"></div>
+        <div data-scroll data-scroll-speed="0.2" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-1"></div>
+        <div data-scroll data-scroll-speed="-0.15" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-2"></div>
+        <div data-scroll data-scroll-speed="0.25" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-3"></div>
+        <div data-scroll data-scroll-speed="-0.2" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-4"></div>
+        <div data-scroll data-scroll-speed="0.18" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-5"></div>
+        <div data-scroll data-scroll-speed="-0.22" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-6"></div>
       </div>
       
       <!-- Subtle moving lines -->
       <div class="absolute inset-0">
-        <div class="absolute h-px bg-gradient-to-r from-transparent via-[#fe2905]/30 to-transparent animate-line-1" style="top: 25%; width: 200px;"></div>
-        <div class="absolute h-px bg-gradient-to-r from-transparent via-[#fe2905]/20 to-transparent animate-line-2" style="top: 75%; width: 150px;"></div>
+        <div data-scroll data-scroll-speed="0.5" class="absolute h-px bg-gradient-to-r from-transparent via-[#fe2905]/30 to-transparent animate-line-1" style="top: 25%; width: 200px;"></div>
+        <div data-scroll data-scroll-speed="-0.5" class="absolute h-px bg-gradient-to-r from-transparent via-[#fe2905]/20 to-transparent animate-line-2" style="top: 75%; width: 150px;"></div>
       </div>
     </div>
 
     <!-- Content -->
-    <div class="relative z-10">
+    <div class="relative z-10" data-scroll-section>
       <!-- Navigation -->
       <UContainer class="py-6">
         <nav class="flex items-center justify-between backdrop-blur-xl bg-black/40 rounded-2xl px-8 py-5 border border-[#fe2905]/20 shadow-2xl shadow-[#fe2905]/10">
@@ -83,8 +83,8 @@
       </UContainer>
 
       <!-- Hero Section -->
-      <UContainer class="py-20">
-        <div class="text-center">
+      <UContainer class="py-20" data-scroll-section>
+        <div class="text-center" v-reveal data-scroll data-scroll-speed="0.3">
           <h1 class="text-7xl md:text-9xl font-black mb-12 leading-none tracking-tight">
             <span class="bg-gradient-to-r from-white via-white to-[#fe2905]/90 bg-clip-text text-transparent animate-text-glow block">
               UNLEASH
@@ -100,8 +100,9 @@
              Where legends are born and nights become <span class="text-[#fe2905] font-bold">unforgettable</span>.
            </p>
           
-          <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
+          <div class="flex flex-col sm:flex-row gap-8 justify-center items-center" v-reveal data-scroll data-scroll-speed="0.4">
             <UButton 
+              v-magnetic
               size="xl" 
               class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/90 hover:from-[#fe2905]/90 hover:to-[#fe2905] text-white font-black px-16 py-8 text-2xl transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/50 group relative overflow-hidden"
             >
@@ -109,7 +110,8 @@
               <UIcon name="i-heroicons-calendar" class="mr-4 group-hover:animate-bounce text-3xl" />
               DISCOVER EVENTS
             </UButton>
-                         <UButton 
+             <UButton 
+               v-tilt
                size="xl" 
                class="border-3 border-[#fe2905] bg-transparent text-[#fe2905] hover:bg-[#fe2905]/10 font-black px-16 py-8 text-2xl transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/30 group backdrop-blur-xl relative overflow-hidden"
              >
@@ -122,9 +124,9 @@
       </UContainer>
 
       <!-- Features Section -->
-      <UContainer class="pt-10">
+        <UContainer class="pt-10" data-scroll-section>
                 <div class="grid md:grid-cols-3 gap-12">
-          <UCard class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
+          <UCard v-tilt class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-[#fe2905]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <template #header>
               <div class="flex items-center space-x-6 relative z-10">
@@ -144,7 +146,7 @@
             </div>
           </UCard>
 
-                    <UCard class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
+          <UCard v-tilt class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-[#fe2905]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <template #header>
               <div class="flex items-center space-x-6 relative z-10">
@@ -164,7 +166,7 @@
             </div>
           </UCard>
 
-                    <UCard class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
+          <UCard v-tilt class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-[#fe2905]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <template #header>
               <div class="flex items-center space-x-6 relative z-10">
@@ -187,7 +189,7 @@
       </UContainer>
 
       <!-- Stats Section -->
-             <UContainer class="py-32">
+      <UContainer class="py-32" data-scroll-section>
          <div class="bg-gradient-to-r from-black/60 via-black/80 to-black/60 backdrop-blur-2xl rounded-3xl border-2 border-[#fe2905]/30 p-8 md:p-16 relative overflow-visible">
            <div class="absolute inset-0 bg-gradient-to-r from-[#fe2905]/5 via-transparent to-[#fe2905]/5"></div>
            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center relative z-10">
@@ -228,7 +230,7 @@
        </UContainer>
 
       <!-- CTA Section -->
-      <UContainer class="pb-32">
+      <UContainer class="pb-32" data-scroll-section>
         <UCard class="bg-gradient-to-r from-[#fe2905] via-[#fe2905]/90 to-[#fe2905] text-center overflow-hidden relative">
           <div class="absolute inset-0 bg-gradient-to-r from-[#fe2905]/95 via-[#fe2905]/90 to-[#fe2905]/95"></div>
           <div class="absolute inset-0">

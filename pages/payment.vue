@@ -1,52 +1,52 @@
 <template>
   <div class="min-h-screen bg-black text-white overflow-hidden relative">
-    <!-- Dynamic Moving Background (same as main page) -->
-    <div class="fixed inset-0 z-0">
+    <!-- Dynamic Moving Background (parallax-enabled) -->
+    <div class="absolute inset-0 z-0" data-scroll>
       <!-- Pure black base -->
       <div class="absolute inset-0 bg-black"></div>
       
       <!-- Moving gradient orbs -->
       <div class="absolute inset-0">
-        <div class="absolute w-96 h-96 bg-gradient-radial from-[#fe2905]/20 to-transparent rounded-full blur-3xl animate-float-slow" 
+        <div data-scroll data-scroll-speed="-2" class="absolute w-96 h-96 bg-gradient-radial from-[#fe2905]/20 to-transparent rounded-full blur-3xl animate-float-slow" 
              style="top: 10%; left: 10%; animation-delay: 0s;"></div>
-        <div class="absolute w-80 h-80 bg-gradient-radial from-[#fe2905]/15 to-transparent rounded-full blur-3xl animate-float-medium" 
+        <div data-scroll data-scroll-speed="1.4" class="absolute w-80 h-80 bg-gradient-radial from-[#fe2905]/15 to-transparent rounded-full blur-3xl animate-float-medium" 
              style="top: 60%; right: 15%; animation-delay: 2s;"></div>
-        <div class="absolute w-72 h-72 bg-gradient-radial from-[#fe2905]/10 to-transparent rounded-full blur-3xl animate-float-fast" 
+        <div data-scroll data-scroll-speed="-1" class="absolute w-72 h-72 bg-gradient-radial from-[#fe2905]/10 to-transparent rounded-full blur-3xl animate-float-fast" 
              style="bottom: 20%; left: 30%; animation-delay: 4s;"></div>
       </div>
       
       <!-- Moving particles system -->
       <div class="absolute inset-0 overflow-hidden">
         <!-- Large moving particles -->
-        <div class="absolute w-3 h-3 bg-[#fe2905] rounded-full animate-drift-1 opacity-80"></div>
-        <div class="absolute w-2 h-2 bg-[#fe2905] rounded-full animate-drift-2 opacity-60"></div>
-        <div class="absolute w-4 h-4 bg-[#fe2905] rounded-full animate-drift-3 opacity-40"></div>
-        <div class="absolute w-1.5 h-1.5 bg-[#fe2905] rounded-full animate-drift-4 opacity-90"></div>
-        <div class="absolute w-2.5 h-2.5 bg-[#fe2905] rounded-full animate-drift-5 opacity-70"></div>
+        <div data-scroll data-scroll-speed="0.6" class="absolute w-3 h-3 bg-[#fe2905] rounded-full animate-drift-1 opacity-80"></div>
+        <div data-scroll data-scroll-speed="-0.5" class="absolute w-2 h-2 bg-[#fe2905] rounded-full animate-drift-2 opacity-60"></div>
+        <div data-scroll data-scroll-speed="0.8" class="absolute w-4 h-4 bg-[#fe2905] rounded-full animate-drift-3 opacity-40"></div>
+        <div data-scroll data-scroll-speed="-0.4" class="absolute w-1.5 h-1.5 bg-[#fe2905] rounded-full animate-drift-4 opacity-90"></div>
+        <div data-scroll data-scroll-speed="0.9" class="absolute w-2.5 h-2.5 bg-[#fe2905] rounded-full animate-drift-5 opacity-70"></div>
         
         <!-- Medium particles -->
-        <div class="absolute w-1 h-1 bg-[#fe2905] rounded-full animate-spiral-1 opacity-80"></div>
-        <div class="absolute w-1.5 h-1.5 bg-[#fe2905] rounded-full animate-spiral-2 opacity-60"></div>
-        <div class="absolute w-1 h-1 bg-[#fe2905] rounded-full animate-spiral-3 opacity-90"></div>
+        <div data-scroll data-scroll-speed="-0.3" class="absolute w-1 h-1 bg-[#fe2905] rounded-full animate-spiral-1 opacity-80"></div>
+        <div data-scroll data-scroll-speed="0.4" class="absolute w-1.5 h-1.5 bg-[#fe2905] rounded-full animate-spiral-2 opacity-60"></div>
+        <div data-scroll data-scroll-speed="-0.2" class="absolute w-1 h-1 bg-[#fe2905] rounded-full animate-spiral-3 opacity-90"></div>
         
         <!-- Small floating particles -->
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-1"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-2"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-3"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-4"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-5"></div>
-        <div class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-6"></div>
+        <div data-scroll data-scroll-speed="0.2" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-1"></div>
+        <div data-scroll data-scroll-speed="-0.15" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-2"></div>
+        <div data-scroll data-scroll-speed="0.25" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-3"></div>
+        <div data-scroll data-scroll-speed="-0.2" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-4"></div>
+        <div data-scroll data-scroll-speed="0.18" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-5"></div>
+        <div data-scroll data-scroll-speed="-0.22" class="absolute w-0.5 h-0.5 bg-[#fe2905] rounded-full animate-float-particle-6"></div>
       </div>
       
       <!-- Subtle moving lines -->
       <div class="absolute inset-0">
-        <div class="absolute h-px bg-gradient-to-r from-transparent via-[#fe2905]/30 to-transparent animate-line-1" style="top: 25%; width: 200px;"></div>
-        <div class="absolute h-px bg-gradient-to-r from-transparent via-[#fe2905]/20 to-transparent animate-line-2" style="top: 75%; width: 150px;"></div>
+        <div data-scroll data-scroll-speed="0.5" class="absolute h-px bg-gradient-to-r from-transparent via-[#fe2905]/30 to-transparent animate-line-1" style="top: 25%; width: 200px;"></div>
+        <div data-scroll data-scroll-speed="-0.5" class="absolute h-px bg-gradient-to-r from-transparent via-[#fe2905]/20 to-transparent animate-line-2" style="top: 75%; width: 150px;"></div>
       </div>
     </div>
 
     <!-- Content -->
-    <div class="relative z-10">
+    <div class="relative z-10" data-scroll-section>
       <!-- Navigation -->
       <UContainer class="py-6">
         <nav class="flex items-center justify-between backdrop-blur-xl bg-black/40 rounded-2xl px-8 py-5 border border-[#fe2905]/20 shadow-2xl shadow-[#fe2905]/10">
@@ -71,8 +71,8 @@
       </UContainer>
 
       <!-- Main Payment Section -->
-      <UContainer class="py-20">
-        <div class="max-w-4xl mx-auto">
+      <UContainer class="py-20" data-scroll-section>
+        <div class="max-w-4xl mx-auto" v-reveal data-scroll data-scroll-speed="0.2">
           <!-- Header -->
           <div class="text-center mb-16">
             <h1 class="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tight">
@@ -84,8 +84,8 @@
               </span>
             </h1>
             <p class="text-2xl md:text-3xl text-white mb-8 max-w-3xl mx-auto leading-relaxed font-light">
-              Gain exclusive access to KL's most <span class="text-[#fe2905] font-bold">coveted Telegram group</span> 
-              and unlock the ultimate party experience
+              Telegram Group Access <span class="text-[#fe2905] font-bold">(Comes with Free Event Ticket)</span>.
+              Unlock the ultimate party experience.
             </p>
           </div>
 
@@ -100,10 +100,10 @@
                   <UIcon name="i-heroicons-trophy" class="w-10 h-10 text-white" />
                 </div>
                 <h2 class="text-4xl md:text-5xl font-black text-white mb-4">
-                  VIP TELEGRAM ACCESS
+                  Telegram Group Access
                 </h2>
                 <p class="text-xl text-white/80 font-light">
-                  Join 50,000+ elite members in KL's most exclusive party network
+                  Comes with a Free Event Ticket. Join KL's most exclusive party network.
                 </p>
               </div>
 
@@ -157,9 +157,7 @@
                   <div class="text-6xl md:text-7xl font-black text-[#fe2905] mb-2">
                     99RM
                   </div>
-                  <div class="text-xl text-white/80 font-light">
-                    One-time membership fee
-                  </div>
+                  <div class="text-xl text-white/80 font-light">One-time access fee</div>
                   <div class="text-sm text-white/60 mt-2">
                     Lifetime access • No recurring charges
                   </div>
@@ -169,13 +167,14 @@
               <!-- Buy Button -->
               <div class="text-center">
                 <UButton 
+                  v-magnetic
                   @click="handlePurchase"
                   size="xl" 
                   class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/80 hover:from-[#fe2905]/90 hover:to-[#fe2905] text-white font-black px-20 py-8 text-2xl transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/50 group relative overflow-hidden"
                 >
                   <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                   <UIcon name="i-heroicons-credit-card" class="mr-4 group-hover:animate-bounce text-3xl" />
-                  BUY NOW - JOIN ELITE
+                  BUY NOW — GET ACCESS
                 </UButton>
                 
                 <p class="text-sm text-white/60 mt-6 max-w-md mx-auto">
