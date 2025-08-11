@@ -46,7 +46,10 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'KL parties, Kuala Lumpur nightlife, exclusive events, premium venues, party platform' },
         { property: 'og:title', content: 'UniPartiesKL - Unleash The Night' },
         { property: 'og:description', content: 'KL\'s most exclusive party platform' },
-        { property: 'og:type', content: 'website' }
+        { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: '/logo.jpg' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: '/logo.jpg' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

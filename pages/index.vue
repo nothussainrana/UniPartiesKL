@@ -51,10 +51,10 @@
       <UContainer class="py-6">
         <nav class="flex items-center justify-between backdrop-blur-xl bg-black/40 rounded-2xl px-8 py-5 border border-[#fe2905]/20 shadow-2xl shadow-[#fe2905]/10">
           <div class="flex items-center space-x-4">
-            <div class="relative group">
-              <UIcon name="i-heroicons-fire" class="w-10 h-10 text-[#fe2905] group-hover:animate-pulse transition-all duration-300" />
+            <NuxtLink to="/" class="relative group inline-flex items-center">
+              <img src="/logo.jpg" alt="UniPartiesKL logo" class="w-10 h-10 object-contain" />
               <div class="absolute inset-0 w-10 h-10 bg-[#fe2905]/30 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
-            </div>
+            </NuxtLink>
             <h1 class="text-3xl font-black bg-gradient-to-r from-white via-[#fe2905]/80 to-white bg-clip-text text-transparent">
               UniPartiesKL
             </h1>
@@ -265,10 +265,10 @@
         <UContainer>
           <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center space-x-4 mb-8 md:mb-0">
-              <div class="relative">
-                <UIcon name="i-heroicons-fire" class="w-10 h-10 text-[#fe2905] animate-pulse" />
-                <div class="absolute inset-0 w-10 h-10 bg-[#fe2905]/30 rounded-full blur-lg"></div>
-              </div>
+            <div class="relative">
+              <img src="/logo.jpg" alt="UniPartiesKL logo" class="w-10 h-10 object-contain" />
+              <div class="absolute inset-0 w-10 h-10 bg-[#fe2905]/30 rounded-full blur-lg"></div>
+            </div>
               <span class="text-2xl font-black bg-gradient-to-r from-white to-[#fe2905]/80 bg-clip-text text-transparent">
                 UniPartiesKL
               </span>
