@@ -48,36 +48,22 @@
     <!-- Content -->
     <div class="relative z-10" data-scroll-section>
       <!-- Navigation -->
-      <UContainer class="py-6">
-        <nav class="flex items-center justify-between backdrop-blur-xl bg-black/40 rounded-2xl px-8 py-5 border border-[#fe2905]/20 shadow-2xl shadow-[#fe2905]/10">
-          <div class="flex items-center space-x-4">
-            <NuxtLink to="/" class="relative group inline-flex items-center">
-              <img src="/logo.jpg" alt="UniPartiesKL logo" class="w-10 h-10 object-contain" />
-              <div class="absolute inset-0 w-10 h-10 bg-[#fe2905]/30 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
-            </NuxtLink>
-            <h1 class="text-3xl font-black bg-gradient-to-r from-white via-[#fe2905]/80 to-white bg-clip-text text-transparent">
-              UniPartiesKL
-            </h1>
+      <UContainer class="py-2">
+        <nav class="fixed top-2 left-1/2 -translate-x-1/2 z-50 inline-flex items-center gap-3 whitespace-nowrap backdrop-blur-xl bg-black/40 rounded-2xl px-3 py-2 border border-[#fe2905]/20 shadow-xl shadow-[#fe2905]/10 w-fit">
+          <NuxtLink to="/" class="relative group inline-flex items-center">
+            <img src="/logo-nobg.png" alt="UniPartiesKL logo" class="w-12 h-12 object-contain logo-spin" />
+            <div class="absolute inset-0 w-12 h-12 bg-[#fe2905]/30 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
+          </NuxtLink>
+          <div class="flex items-center gap-2">
+            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 px-2 py-1 text-sm font-semibold">Events</UButton>
+            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 px-2 py-1 text-sm font-semibold">Venues</UButton>
+            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 px-2 py-1 text-sm font-semibold">About</UButton>
           </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#fe2905]/20 font-semibold">
-              Events
-            </UButton>
-            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#fe2905]/20 font-semibold">
-              Venues
-            </UButton>
-            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#fe2905]/20 font-semibold">
-              About
-            </UButton>
-            <UButton 
-              @click="navigateToPayment"
-              class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/80 hover:from-[#fe2905]/90 hover:to-[#fe2905] transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/40 font-bold px-6 py-3 text-white"
-            >
-              Join Elite
-            </UButton>
-          </div>
-          <UButton variant="ghost" class="md:hidden text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10">
-            <UIcon name="i-heroicons-bars-3" />
+          <UButton 
+            @click="navigateToPayment"
+            class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/80 hover:from-[#fe2905]/90 hover:to-[#fe2905] transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#fe2905]/40 font-bold px-4 py-2 text-sm text-white"
+          >
+            Join Group Chat
           </UButton>
         </nav>
       </UContainer>
@@ -266,12 +252,9 @@
           <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center space-x-4 mb-8 md:mb-0">
             <div class="relative">
-              <img src="/logo.jpg" alt="UniPartiesKL logo" class="w-10 h-10 object-contain" />
-              <div class="absolute inset-0 w-10 h-10 bg-[#fe2905]/30 rounded-full blur-lg"></div>
+              <img src="/logo-nobg.png" alt="UniPartiesKL logo" class="w-16 h-16 object-contain logo-spin" />
+              <div class="absolute inset-0 w-16 h-16 bg-[#fe2905]/30 rounded-full blur-lg"></div>
             </div>
-              <span class="text-2xl font-black bg-gradient-to-r from-white to-[#fe2905]/80 bg-clip-text text-transparent">
-                UniPartiesKL
-              </span>
             </div>
                          <div class="flex space-x-10 text-white">
                <a href="#" class="hover:text-[#fe2905] transition-all duration-300 hover:scale-125 text-xl font-semibold">Privacy</a>
@@ -281,7 +264,7 @@
              </div>
           </div>
                      <div class="text-center mt-12 pt-8 border-t border-[#fe2905]/20">
-             <p class="text-white text-lg">© 2026 UniPartiesKL. All rights reserved. <span class="text-[#fe2905]">Party like royalty.</span></p>
+             <p class="text-white text-lg">© 2026. All rights reserved. <span class="text-[#fe2905]">Party like royalty.</span></p>
            </div>
         </UContainer>
       </footer>
@@ -485,6 +468,14 @@ const navigateToPayment = async () => {
 .animate-text-glow { animation: text-glow 3s ease-in-out infinite; }
 .animate-text-pulse { animation: text-pulse 2s ease-in-out infinite; }
 .animate-glow { animation: glow 2s ease-in-out infinite; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Spinning logo */
+.logo-spin { animation: spin 8s linear infinite; }
 
 /* Smooth scrolling */
 html {

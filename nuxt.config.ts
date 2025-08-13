@@ -47,9 +47,9 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'UniPartiesKL - Unleash The Night' },
         { property: 'og:description', content: 'KL\'s most exclusive party platform' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:image', content: '/logo.jpg' },
+        { property: 'og:image', content: '/logo-nobg.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:image', content: '/logo.jpg' }
+        { name: 'twitter:image', content: '/logo-nobg.png' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
