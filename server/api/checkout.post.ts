@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
         {
           price_data: {
             currency: 'MYR',
-            unit_amount: 9900,
+            unit_amount: 4900,
             product_data: {
             name: 'Telegram Group Access (Free Event Ticket)',
             },

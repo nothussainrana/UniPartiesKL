@@ -47,28 +47,14 @@
 
     <!-- Content -->
     <div class="relative z-10" data-scroll-section>
-      <!-- Navigation -->
-      <UContainer class="py-2">
-        <nav class="fixed top-2 left-1/2 -translate-x-1/2 z-50 inline-flex items-center gap-3 whitespace-nowrap backdrop-blur-xl bg-black/40 rounded-2xl px-3 py-2 border border-[#fe2905]/20 shadow-xl shadow-[#fe2905]/10 w-fit">
-          <NuxtLink to="/" class="relative group inline-flex items-center">
-            <img src="/logo-nobg.png" alt="UniPartiesKL logo" class="w-12 h-12 object-contain logo-spin" />
-            <div class="absolute inset-0 w-12 h-12 bg-[#fe2905]/30 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
-          </NuxtLink>
-          <UButton 
-            @click="navigateBack"
-            class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/80 hover:from-[#fe2905]/90 hover:to-[#fe2905] transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#fe2905]/40 font-bold px-4 py-2 text-sm text-white"
-          >
-            Back
-          </UButton>
-        </nav>
-      </UContainer>
+      <!-- Header moved to global layout -->
 
       <!-- Main Payment Section -->
       <UContainer class="py-20" data-scroll-section>
         <div class="max-w-4xl mx-auto" v-reveal data-scroll data-scroll-speed="0.2">
           <!-- Header -->
           <div class="text-center mb-16">
-            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tight">
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-black mb-6 sm:mb-8 leading-none tracking-tight">
               <span class="bg-gradient-to-r from-white via-white to-[#fe2905]/90 bg-clip-text text-transparent animate-text-glow block">
                 JOIN THE
               </span>
@@ -76,7 +62,7 @@
                 ELITE CIRCLE
               </span>
             </h1>
-            <p class="text-2xl md:text-3xl text-white mb-8 max-w-3xl mx-auto leading-relaxed font-light">
+            <p class="text-lg sm:text-2xl md:text-3xl text-white mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed font-light px-4 sm:px-0">
               Telegram Group Access <span class="text-[#fe2905] font-bold">(Comes with Free Event Ticket)</span>.
               Unlock the ultimate party experience.
             </p>
@@ -86,7 +72,7 @@
           <UCard class="bg-gradient-to-br from-black via-black/95 to-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 shadow-2xl shadow-[#fe2905]/20 relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-[#fe2905]/5 to-transparent"></div>
             
-            <div class="relative z-10 p-12">
+              <div class="relative z-10 p-6 sm:p-10 md:p-12">
               <!-- VIP Package Header -->
               <div class="text-center mb-12">
                 <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#fe2905] to-[#fe2905]/80 mb-6 shadow-2xl shadow-[#fe2905]/40">
@@ -101,7 +87,7 @@
               </div>
 
               <!-- Features List -->
-              <div class="grid md:grid-cols-2 gap-8 mb-12">
+              <div class="grid md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-12">
                 <div class="space-y-6">
                   <div class="flex items-center space-x-4">
                     <div class="w-8 h-8 rounded-full bg-[#fe2905] flex items-center justify-center">
@@ -145,10 +131,10 @@
               </div>
 
               <!-- Pricing -->
-              <div class="text-center mb-12">
-                <div class="inline-block bg-gradient-to-r from-[#fe2905]/20 to-[#fe2905]/10 rounded-2xl p-8 border border-[#fe2905]/30">
-                  <div class="text-6xl md:text-7xl font-black text-[#fe2905] mb-2">
-                    99RM
+              <div class="text-center mb-10 sm:mb-12">
+                <div class="inline-block bg-gradient-to-r from-[#fe2905]/20 to-[#fe2905]/10 rounded-2xl p-6 sm:p-8 border border-[#fe2905]/30">
+                  <div class="text-4xl sm:text-6xl md:text-7xl font-black text-[#fe2905] mb-2">
+                    49RM
                   </div>
                   <div class="text-xl text-white/80 font-light">One-time access fee</div>
                   <div class="text-sm text-white/60 mt-2">
@@ -158,12 +144,12 @@
               </div>
 
               <!-- Buy Button -->
-              <div class="text-center">
+              <div class="text-center px-4 sm:px-0">
                 <UButton 
                   v-magnetic
                   @click="handlePurchase"
-                  size="xl" 
-                  class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/80 hover:from-[#fe2905]/90 hover:to-[#fe2905] text-white font-black px-20 py-8 text-2xl transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/50 group relative overflow-hidden"
+                  size="lg" 
+                  class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/80 hover:from-[#fe2905]/90 hover:to-[#fe2905] text-white font-black px-10 sm:px-20 py-5 sm:py-8 text-xl sm:text-2xl transition-all duration-500 hover:scale-105 sm:hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/50 group relative overflow-hidden"
                 >
                   <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                   <UIcon name="i-heroicons-credit-card" class="mr-4 group-hover:animate-bounce text-3xl" />
@@ -225,7 +211,7 @@
 useHead({
   title: 'VIP Membership - UniPartiesKL | Join Elite Telegram Group',
   meta: [
-    { name: 'description', content: 'Join UniPartiesKL\'s exclusive VIP Telegram group for 99RM. Get access to premium events, VIP discounts, and elite networking opportunities.' }
+    { name: 'description', content: 'Join UniPartiesKL\'s exclusive VIP Telegram group for 49RM. Get access to premium events, VIP discounts, and elite networking opportunities.' }
   ]
 })
 

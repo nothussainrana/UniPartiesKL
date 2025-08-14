@@ -47,31 +47,12 @@
 
     <!-- Content -->
     <div class="relative z-10" data-scroll-section>
-      <!-- Navigation -->
-      <UContainer class="py-2">
-        <nav class="fixed top-2 left-1/2 -translate-x-1/2 z-50 inline-flex items-center gap-3 whitespace-nowrap backdrop-blur-xl bg-black/40 rounded-2xl px-3 py-2 border border-[#fe2905]/20 shadow-xl shadow-[#fe2905]/10 w-fit">
-          <NuxtLink to="/" class="relative group inline-flex items-center">
-            <img src="/logo-nobg.png" alt="UniPartiesKL logo" class="w-12 h-12 object-contain logo-spin" />
-            <div class="absolute inset-0 w-12 h-12 bg-[#fe2905]/30 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
-          </NuxtLink>
-          <div class="flex items-center gap-2">
-            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 px-2 py-1 text-sm font-semibold">Events</UButton>
-            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 px-2 py-1 text-sm font-semibold">Venues</UButton>
-            <UButton variant="ghost" class="text-white hover:text-[#fe2905] hover:bg-[#fe2905]/10 px-2 py-1 text-sm font-semibold">About</UButton>
-          </div>
-          <UButton 
-            @click="navigateToPayment"
-            class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/80 hover:from-[#fe2905]/90 hover:to-[#fe2905] transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#fe2905]/40 font-bold px-4 py-2 text-sm text-white"
-          >
-            Join Group Chat
-          </UButton>
-        </nav>
-      </UContainer>
+      <!-- Header moved to global layout -->
 
       <!-- Hero Section -->
       <UContainer class="py-20" data-scroll-section>
         <div class="text-center" v-reveal data-scroll data-scroll-speed="0.3">
-          <h1 class="text-7xl md:text-9xl font-black mb-12 leading-none tracking-tight">
+          <h1 class="text-5xl sm:text-7xl md:text-9xl font-black mb-8 sm:mb-12 leading-none tracking-tight">
             <span class="bg-gradient-to-r from-white via-white to-[#fe2905]/90 bg-clip-text text-transparent animate-text-glow block">
               UNLEASH
             </span>
@@ -86,11 +67,11 @@
              Where legends are born and nights become <span class="text-[#fe2905] font-bold">unforgettable</span>.
            </p>
           
-          <div class="flex flex-col sm:flex-row gap-8 justify-center items-center" v-reveal data-scroll data-scroll-speed="0.4">
+           <div class="flex flex-col sm:flex-row gap-5 sm:gap-8 justify-center items-center" v-reveal data-scroll data-scroll-speed="0.4">
             <UButton 
               v-magnetic
-              size="xl" 
-              class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/90 hover:from-[#fe2905]/90 hover:to-[#fe2905] text-white font-black px-16 py-8 text-2xl transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/50 group relative overflow-hidden"
+              size="lg" 
+              class="bg-gradient-to-r from-[#fe2905] to-[#fe2905]/90 hover:from-[#fe2905]/90 hover:to-[#fe2905] text-white font-black px-10 sm:px-16 py-5 sm:py-8 text-xl sm:text-2xl transition-all duration-500 hover:scale-110 sm:hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/50 group relative overflow-hidden"
             >
               <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
               <UIcon name="i-heroicons-calendar" class="mr-4 group-hover:animate-bounce text-3xl" />
@@ -98,8 +79,8 @@
             </UButton>
              <UButton 
                v-tilt
-               size="xl" 
-               class="border-3 border-[#fe2905] bg-transparent text-[#fe2905] hover:bg-[#fe2905]/10 font-black px-16 py-8 text-2xl transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/30 group backdrop-blur-xl relative overflow-hidden"
+               size="lg" 
+               class="border-3 border-[#fe2905] bg-transparent text-[#fe2905] hover:bg-[#fe2905]/10 font-black px-10 sm:px-16 py-5 sm:py-8 text-xl sm:text-2xl transition-all duration-500 hover:scale-110 sm:hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/30 group backdrop-blur-xl relative overflow-hidden"
              >
                <div class="absolute inset-0 bg-gradient-to-r from-[#fe2905]/0 via-[#fe2905]/10 to-[#fe2905]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                <UIcon name="i-heroicons-map-pin" class="mr-4 group-hover:animate-bounce text-3xl" />
@@ -246,28 +227,7 @@
         </UCard>
       </UContainer>
 
-      <!-- Footer -->
-      <footer class="bg-gradient-to-r from-black via-black to-black border-t-2 border-[#fe2905]/30 py-16">
-        <UContainer>
-          <div class="flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center space-x-4 mb-8 md:mb-0">
-            <div class="relative">
-              <img src="/logo-nobg.png" alt="UniPartiesKL logo" class="w-16 h-16 object-contain logo-spin" />
-              <div class="absolute inset-0 w-16 h-16 bg-[#fe2905]/30 rounded-full blur-lg"></div>
-            </div>
-            </div>
-                         <div class="flex space-x-10 text-white">
-               <a href="#" class="hover:text-[#fe2905] transition-all duration-300 hover:scale-125 text-xl font-semibold">Privacy</a>
-               <a href="#" class="hover:text-[#fe2905] transition-all duration-300 hover:scale-125 text-xl font-semibold">Terms</a>
-               <a href="#" class="hover:text-[#fe2905] transition-all duration-300 hover:scale-125 text-xl font-semibold">Contact</a>
-               <a href="#" class="hover:text-[#fe2905] transition-all duration-300 hover:scale-125 text-xl font-semibold">VIP Club</a>
-             </div>
-          </div>
-                     <div class="text-center mt-12 pt-8 border-t border-[#fe2905]/20">
-             <p class="text-white text-lg">© 2026. All rights reserved. <span class="text-[#fe2905]">Party like royalty.</span></p>
-           </div>
-        </UContainer>
-      </footer>
+      <!-- Footer moved to global layout -->
     </div>
   </div>
 </template>
