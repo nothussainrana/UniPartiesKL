@@ -67,3 +67,89 @@
 }
 
 
+/* Force single dark theme across the app */
+html {
+  color-scheme: dark;
+  background-color: #000;
+}
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Force override ALL primary color variants to our brand red */
+:root {
+  --color-primary-50: 254 243 242;
+  --color-primary-100: 254 226 223;
+  --color-primary-200: 254 197 191;
+  --color-primary-300: 254 155 147;
+  --color-primary-400: 254 102 93;
+  --color-primary-500: 254 41 5;
+  --color-primary-600: 225 29 5;
+  --color-primary-700: 189 23 4;
+  --color-primary-800: 156 22 8;
+  --color-primary-900: 127 22 11;
+  --color-primary-950: 69 8 3;
+}
+
+/* Force it in dark mode too */
+.dark {
+  --color-primary-50: 254 243 242;
+  --color-primary-100: 254 226 223;
+  --color-primary-200: 254 197 191;
+  --color-primary-300: 254 155 147;
+  --color-primary-400: 254 102 93;
+  --color-primary-500: 254 41 5;
+  --color-primary-600: 225 29 5;
+  --color-primary-700: 189 23 4;
+  --color-primary-800: 156 22 8;
+  --color-primary-900: 127 22 11;
+  --color-primary-950: 69 8 3;
+}
+
+/* Force UCard components to be pure black, not gray */
+.dark .bg-gray-900,
+.dark .dark\:bg-gray-900,
+[data-ui="card"] {
+  background-color: #000000 !important;
+}
+
+/* Override any gray ring colors */
+.dark .ring-gray-800,
+.dark .dark\:ring-gray-800 {
+  --tw-ring-color: transparent !important;
+}
+
+/* Force specific buttons to stay black when they should be black */
+.bg-black {
+  background-color: #000000 !important;
+}
+.hover\:bg-gray-900:hover {
+  background-color: #111111 !important;
+}
+
+/* ELITE VENUES button - black background with red text, no border */
+.elite-venues-btn {
+  background-color: #000000 !important;
+  color: #fe2905 !important;
+  border: none !important;
+}
+.elite-venues-btn:hover {
+  background-color: #000000 !important;
+  color: #fe2905 !important;
+  border: none !important;
+}
+
+/* CLAIM VIP STATUS button - black background with white text */
+.claim-vip-btn {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+.claim-vip-btn:hover {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+}
+
+

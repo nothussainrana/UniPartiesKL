@@ -12,6 +12,14 @@ export default defineNuxtConfig({
     ['@nuxtjs/tailwindcss', { exposeConfig: true }]
   ],
 
+  // App-level config passed to Nuxt UI (avoids importing app config at runtime)
+  appConfig: {
+    ui: {
+      primary: 'orange'
+    }
+  },
+
+
   // Global CSS
   css: ['~/assets/css/main.css'],
   
@@ -38,10 +46,11 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page-reveal', mode: 'out-in' },
     layoutTransition: { name: 'layout-reveal', mode: 'out-in' },
     head: {
+      htmlAttrs: { class: 'dark' },
       title: 'UniPartiesKL - Unleash The Night | KL\'s Premier Party Platform',
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'description', content: 'Experience the ultimate party destination in Kuala Lumpur. Exclusive events, premium venues, and unforgettable nights await.' },
         { name: 'keywords', content: 'KL parties, Kuala Lumpur nightlife, exclusive events, premium venues, party platform' },
         { property: 'og:title', content: 'UniPartiesKL - Unleash The Night' },
@@ -49,7 +58,9 @@ export default defineNuxtConfig({
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: '/logo-nobg.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:image', content: '/logo-nobg.png' }
+        { name: 'twitter:image', content: '/logo-nobg.png' },
+        { name: 'theme-color', content: '#000000' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

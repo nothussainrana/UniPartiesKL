@@ -80,7 +80,7 @@
              <UButton 
                v-tilt
                size="lg" 
-               class="border-3 border-[#fe2905] bg-transparent text-[#fe2905] hover:bg-[#fe2905]/10 font-black px-10 sm:px-16 py-5 sm:py-8 text-xl sm:text-2xl transition-all duration-500 hover:scale-110 sm:hover:scale-125 hover:shadow-2xl hover:shadow-[#fe2905]/30 group backdrop-blur-xl relative overflow-hidden"
+               class="elite-venues-btn font-black px-10 sm:px-16 py-5 sm:py-8 text-xl sm:text-2xl transition-all duration-500 hover:scale-110 sm:hover:scale-125 hover:shadow-2xl hover:shadow-black/50 group relative overflow-hidden"
              >
                <div class="absolute inset-0 bg-gradient-to-r from-[#fe2905]/0 via-[#fe2905]/10 to-[#fe2905]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                <UIcon name="i-heroicons-map-pin" class="mr-4 group-hover:animate-bounce text-3xl" />
@@ -93,8 +93,7 @@
       <!-- Features Section -->
         <UContainer class="pt-10" data-scroll-section>
                 <div class="grid md:grid-cols-3 gap-12">
-          <UCard v-tilt class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#fe2905]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <UCard v-tilt class="bg-black border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
             <template #header>
               <div class="flex items-center space-x-6 relative z-10">
                 <div class="relative">
@@ -113,8 +112,7 @@
             </div>
           </UCard>
 
-          <UCard v-tilt class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#fe2905]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <UCard v-tilt class="bg-black border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
             <template #header>
               <div class="flex items-center space-x-6 relative z-10">
                 <div class="relative">
@@ -133,8 +131,7 @@
             </div>
           </UCard>
 
-          <UCard v-tilt class="bg-black backdrop-blur-2xl border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-[#fe2905]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <UCard v-tilt class="bg-black border-2 border-[#fe2905]/30 hover:border-[#fe2905]/60 transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-[#fe2905]/30 group relative overflow-hidden">
             <template #header>
               <div class="flex items-center space-x-6 relative z-10">
                 <div class="relative">
@@ -217,7 +214,7 @@
             <UButton 
               @click="navigateToPayment"
               size="xl" 
-              class="bg-black hover:bg-gray-900 text-white font-black px-20 py-8 text-2xl transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-black/70 group relative overflow-hidden border-2 border-black hover:border-gray-800"
+              class="claim-vip-btn font-black px-20 py-8 text-2xl transition-all duration-500 hover:scale-125 hover:shadow-2xl hover:shadow-black/70 group relative overflow-hidden"
             >
               <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
               <UIcon name="i-heroicons-trophy" class="mr-4 group-hover:animate-bounce text-3xl" />
