@@ -48,51 +48,11 @@
 const pastEvents = [
   {
     id: 'evt-1',
-    title: 'Neon Nights @ SkyBar',
-    date: '12 Jan 2025',
-    venue: 'SkyBar, KLCC',
-    description: 'High-energy rooftop party with neon visuals and headline DJ sets.',
-    tags: ['Rooftop', 'EDM', 'VIP']
-  },
-  {
-    id: 'evt-2',
-    title: 'Midnight Mirage',
-    date: '02 Feb 2025',
-    venue: 'Velvet Room, Bukit Bintang',
-    description: 'Mystique-themed night with deep house grooves and live performers.',
-    tags: ['Deep House', 'Performance']
-  },
-  {
-    id: 'evt-3',
-    title: 'Rooftop Royale',
-    date: '07 Mar 2025',
-    venue: 'Altitude, The City',
-    description: 'Champagne soirée under the stars with exclusive bottle service.',
-    tags: ['Soirée', 'Bottle Service']
-  },
-  {
-    id: 'evt-4',
-    title: 'Underground Pulse',
-    date: '19 Apr 2025',
-    venue: 'SubZero Warehouse',
-    description: 'Raw warehouse energy with techno heavyweights and immersive lighting.',
-    tags: ['Techno', 'Warehouse']
-  },
-  {
-    id: 'evt-5',
-    title: 'Luxe Affair',
-    date: '25 May 2025',
-    venue: 'The Penthouse, City Center',
-    description: 'Black-tie gala featuring live sax, vocal sets, and curated cocktails.',
-    tags: ['Black Tie', 'Live Music']
-  },
-  {
-    id: 'evt-6',
-    title: 'Sunset Sessions',
-    date: '14 Jun 2025',
-    venue: 'Horizon Rooftop',
-    description: 'Golden-hour chill-out with tropical house and panoramic views.',
-    tags: ['Sunset', 'Tropical House']
+    title: 'X Event Name',
+    date: 'X Date',
+    venue: 'X Venue, X Location',
+    description: 'X event description with X details and X features.',
+    tags: ['X Tag', 'X Tag', 'X Tag']
   }
 ]
 </script>

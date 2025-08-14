@@ -48,57 +48,12 @@
 const featuredVenues = [
   {
     id: 'v-1',
-    name: 'SkyBar KLCC',
-    location: 'KLCC',
-    description: 'Iconic rooftop venue with panoramic skyline views and signature cocktails.',
-    tags: ['Rooftop', 'Skyline', 'Cocktails'],
-    capacity: 200,
-    status: 'Members Only'
-  },
-  {
-    id: 'v-2',
-    name: 'Velvet Room',
-    location: 'Bukit Bintang',
-    description: 'Lux lounge with plush interiors, bottle service, and private booths.',
-    tags: ['Lounge', 'Bottle Service'],
-    capacity: 350,
-    status: 'VIP Tables'
-  },
-  {
-    id: 'v-3',
-    name: 'SubZero Warehouse',
-    location: 'Sungei Besi',
-    description: 'Raw industrial space perfect for underground techno and pop-up raves.',
-    tags: ['Warehouse', 'Techno'],
-    capacity: 800,
-    status: 'Pop-up'
-  },
-  {
-    id: 'v-4',
-    name: 'The Penthouse',
-    location: 'City Center',
-    description: 'Elegant penthouse setting for black-tie soirées and live performances.',
-    tags: ['Black Tie', 'Live Music'],
-    capacity: 120,
-    status: 'Invite Only'
-  },
-  {
-    id: 'v-5',
-    name: 'Horizon Rooftop',
-    location: 'Mont Kiara',
-    description: 'Laid-back rooftop with sunset views and a refined lounge atmosphere.',
-    tags: ['Sunset', 'Lounge'],
-    capacity: 250,
-    status: 'Open Fridays'
-  },
-  {
-    id: 'v-6',
-    name: 'The Hideout Speakeasy',
-    location: 'Chinatown',
-    description: 'Hidden speakeasy with jazz nights and crafted mixology.',
-    tags: ['Speakeasy', 'Jazz'],
-    capacity: 80,
-    status: 'Reservation Only'
+    name: 'X Venue Name',
+    location: 'X Location',
+    description: 'X venue description with X features and X amenities.',
+    tags: ['X Tag', 'X Tag'],
+    capacity: 'X',
+    status: 'X Status'
   }
 ]
 </script>
